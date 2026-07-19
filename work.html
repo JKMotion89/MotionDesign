@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — JK Motion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="scrubber">
+  <div class="scrubber__track"></div>
+  <div class="scrubber__inner">
+    <a href="index.html" class="scrubber__brand">JK<span>MOTION</span><small>REEL.MOV</small></a>
+    <span class="scrubber__code">00:00:00</span>
+    <button class="scrubber__menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav class="scrubber__nav">
+      <button class="scrubber__kf" data-key="home" onclick="location.href='index.html'">Home</button>
+      <button class="scrubber__kf is-active" data-key="work">Work</button>
+      <button class="scrubber__kf" data-key="about" onclick="location.href='index.html#about'">About</button>
+      <button class="scrubber__kf" data-key="contact" onclick="location.href='index.html#contact'">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:40px;">
+    <div class="wrap">
+      <div class="hero__eyebrow">Full archive</div>
+      <h1 style="font-size:clamp(44px,8vw,96px);">All the <span class="accent">work.</span></h1>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:none; padding-top:0;">
+    <div class="wrap">
+      <div class="grid" data-work-grid></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span data-site="brand"></span>
+  <span>&copy; <span id="year"></span></span>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
